@@ -71,7 +71,7 @@ script/
 
 - Python 3.6+
 - macOS系统（需要install_name_tool等工具）
-- 现有的framework_to_dylib_single.py脚本
+- 现有的framework_to_dylib.py脚本
 
 ## 注意事项
 
