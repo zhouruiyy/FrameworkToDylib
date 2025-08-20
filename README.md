@@ -56,12 +56,12 @@ script/
 ├── check_dylib_dependencies.py  # dylib依赖检查脚本
 ├── quick_start.py               # 交互式启动脚本
 ├── SDK/                         # SDK存储目录
-│   ├── 25.8.21/                # 版本目录
-│   │   ├── *.zip               # 原始SDK文件
-│   │   ├── agora_sdk_mac_*.zip # 标准压缩包
-│   │   └── agora_sdk_mac_*-aed.zip # AED版本压缩包
+│   ├── 25.8.21/                 # 版本目录
+│   │   ├── *.zip                # 原始SDK文件
+│   │   ├── *.zip                # 标准压缩包
+│   │   └── *-aed.zip            # AED版本压缩包
 │   └── ...
-└── aed/                        # AED dylib文件目录
+└── aed/                         # AED dylib文件目录
     └── libuap_aed.dylib
 ```
 
