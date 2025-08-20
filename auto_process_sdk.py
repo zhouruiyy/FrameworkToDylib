@@ -229,7 +229,8 @@ class AgoraSDKProcessor:
             with zipfile.ZipFile(zip_path, 'w', zipfile.ZIP_DEFLATED) as zipf:
                 for file_path in self.sdk_dir.rglob('*'):
                     if file_path.is_file():
-                        arcname = file_path.relative_to(self.sdk_dir)
+                        # 在zip内部创建agora_sdk目录结构
+                        arcname = Path("agora_sdk") / file_path.relative_to(self.sdk_dir)
                         zipf.write(file_path, arcname)
             
             print(f"✅ 标准压缩包创建完成: {zip_path}")
@@ -271,7 +272,8 @@ class AgoraSDKProcessor:
             with zipfile.ZipFile(zip_path, 'w', zipfile.ZIP_DEFLATED) as zipf:
                 for file_path in self.sdk_dir.rglob('*'):
                     if file_path.is_file():
-                        arcname = file_path.relative_to(self.sdk_dir)
+                        # 在zip内部创建agora_sdk目录结构
+                        arcname = Path("agora_sdk") / file_path.relative_to(self.sdk_dir)
                         zipf.write(file_path, arcname)
             
             print(f"✅ AED版本压缩包创建完成: {zip_path}")
